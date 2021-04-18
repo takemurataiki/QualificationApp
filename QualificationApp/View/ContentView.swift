@@ -8,32 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isActive: Bool = false
-    
     var body: some View {
-        NavigationView {
-            VStack {
-                Text("資格クイズ")
-                    .font(.largeTitle)
-                    .fontWeight(.regular)
-                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                
-                Spacer()
-                NavigationLink(destination: QuizListView(isShow: self.$isActive),
-                               isActive: self.$isActive) {
-                    Text("スタート")
-                    
-                }
-                
-                
-                Spacer()
-                
-                
-                    
-            }
-            .navigationBarTitle("スタートボタン", displayMode: .inline)
-        }
-            
+
+        HomeView()
     }
 }
 

@@ -19,7 +19,10 @@ struct QuizListView: View {
         
             VStack {
                 List(0 ..< 5) { item in
-                    NavigationLink(destination: AnswerView(isShow: self.$isShow)) {
+                    NavigationLink(destination: TFQuizView(
+                                    questionModel: QuestionModel(question: "問題文", option1:  "選択1", option2: "選択2", option3: "選択3", option4: "選択4", answer: 1),
+                                    isShow: self.$isShow,
+                                    question: QuestionViewModel())) {
                         Text("問題" + String(item))
                     }
                     .isDetailLink(false)

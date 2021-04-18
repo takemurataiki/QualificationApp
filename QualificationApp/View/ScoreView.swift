@@ -13,7 +13,6 @@ struct ScoreView: View {
     ///navigationBarTitleを重ならないようにする
     @Environment(\.presentationMode) var presentation
     var body: some View {
-        NavigationView {
             VStack {
                 Spacer()
                 Text("スコア")
@@ -24,8 +23,7 @@ struct ScoreView: View {
                 }
                 Spacer()
             }
-            .navigationBarTitle("問題リスト", displayMode: .inline)
-        }
+            .navigationBarTitle("ScoreView", displayMode: .inline)
     }
 }
 
